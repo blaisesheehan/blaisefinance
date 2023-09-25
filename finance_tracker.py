@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 
+# GUI interface for financial tracker
+
 root = tk.Tk()
 root.title("Finance Tracker")
 
@@ -29,3 +31,5 @@ tbl_lbl = ttk.Label(tbl_frm, text="LOGIC OF EXPENSES")
 tbl_lbl.pack()
 
 root.mainloop()
+
+# 
