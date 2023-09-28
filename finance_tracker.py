@@ -1,5 +1,13 @@
 import tkinter as tk
 from tkinter import ttk
+import sqlite3
+
+
+# Root Logic
+
+    
+def add():
+    
 
 # GUI interface for financial tracker
 
@@ -9,13 +17,13 @@ root.title("Finance Tracker")
 ttl_frm =  tk.Frame(root)
 ttl_frm.pack(side=tk.TOP, padx=10, pady=90)
 
-ttl = tk.Label(ttl_frm, text = "Blaise's Finance Tracker", font = ("Helvetica", 40))
+ttl = tk.Label(ttl_frm, text = "Personal Finance Tracker", font = ("Helvetica", 40))
 ttl.pack()
 
 button_frm = tk.Frame(root)
 button_frm.pack(side=tk.LEFT, padx=10, pady=10)
 
-add = ttk.Button(button_frm, text="Add")
+add = ttk.Button(button_frm, text="Add", command =add)
 delete = ttk.Button(button_frm, text="Delete")
 edit = ttk.Button(button_frm, text="Edit")
 
@@ -32,4 +40,14 @@ tbl_lbl.pack()
 
 root.mainloop()
 
-# 
+# SQL Database Connection 
+
+main_db = sqlite3.connect("finances.db")
+main_cursor = main_db.cursor()
+
+
+# Root Logic
+
+
+
+# Adding
